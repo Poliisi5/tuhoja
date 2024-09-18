@@ -7,5 +7,5 @@ do
   echo $COUNTER > $TEMPFILE
   touch %COUNTER
   echo %COUNTER
-done
+  done
 done
