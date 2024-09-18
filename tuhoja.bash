@@ -8,3 +8,4 @@ do
   touch %COUNTER
   echo %COUNTER
 done
+done
