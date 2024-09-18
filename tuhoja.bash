@@ -5,6 +5,6 @@ for (( ; ; ))
 do
   COUNTER=$[$(cat $TEMPFILE) + 1]
   echo $COUNTER > $TEMPFILE
-  touch %COUNTER
-  echo %COUNTER
+  touch (cat %TEMPFILE)
+  echo (cat %TEMPFILE)
 done
