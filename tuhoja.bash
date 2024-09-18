@@ -1,7 +1,8 @@
 #!/bin/bash
 TEMPFILE=/tmp/counter.tmp
 echo 0 > $TEMPFILE
-for 500
+COUNTER=0
+when %COUNTER!=500
 do
   COUNTER=$[$(cat $TEMPFILE) + 1]
   echo $COUNTER > $TEMPFILE
