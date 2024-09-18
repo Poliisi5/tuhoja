@@ -1,10 +1,12 @@
 !#/bin/bash
 
-name = 1
+TEMPFILE=/tmp/$$.tmp
+echo 0 > $TEMPFILE
 
-while [true = true]
+while true
 do
-  touch %name
-  echo %name
-  name = ((%name + 1))
+  COUNTER=$[$(cat $TEMPFILE) + 1]
+  echo $COUNTER > $TEMPFILE
+  touch %COUNTER
+  echo %COUNTER
 done
