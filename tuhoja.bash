@@ -2,7 +2,7 @@
 TEMPFILE=/tmp/counter.tmp
 echo 0 > $TEMPFILE
 COUNTER=0
-while [%COUNTER!=500]
+until [%COUNTER=500]
 do
   COUNTER=$[$(cat $TEMPFILE) + 1]
   echo $COUNTER > $TEMPFILE
