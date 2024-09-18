@@ -1,5 +1,5 @@
 #!/bin/bash
-TEMPFILE=/tmp/$$.tmp
+TEMPFILE=/tmp/counter.tmp
 echo 0 > $TEMPFILE
 while true
 do
