@@ -2,7 +2,7 @@
 TEMPFILE=/tmp/counter.tmp
 echo 0 > $TEMPFILE
 COUNTER=0
-for i in {1..500}
+for (( c=0; c<=500; c++ ))
 do
   COUNTER=$[$(cat $TEMPFILE) + 1]
   echo $COUNTER > $TEMPFILE
