@@ -1,5 +1,5 @@
 #!/bin/bash
-TEMPFILE=/tmp/counter.tmp
+TEMPFILE=~/counter.tmp
 echo 0 > $TEMPFILE
 COUNTER=0
 for (( c=0; c<=500; c++ ))
@@ -9,3 +9,4 @@ do
   head -c 512000 /dev/urandom | base64 > ~/$COUNTER
   echo $COUNTER
 done
+unlink $TEMPFILE
