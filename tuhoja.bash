@@ -1,7 +1,7 @@
 #!/bin/bash
 TEMPFILE=~/counter.tmp
 COUNTER=0
-if test -f $TEMPFILE ;
+if test -f $TEMPFILE ; then
   $COUNTER = cat $TEMPFILE
 else
   echo 0 > $TEMPFILE
