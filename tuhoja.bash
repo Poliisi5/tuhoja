@@ -1,5 +1,5 @@
 #!/bin/bash
-TEMPFILE=~/counter.tmp
+TEMPFILE=~counter.tmp
 COUNTER=0
 if test -f $TEMPFILE ; then
   $COUNTER = cat $TEMPFILE
@@ -13,3 +13,6 @@ do
   head -c 512000 /dev/urandom | base64 > ~/$COUNTER
   echo $COUNTER
 done
+rm -f $TEMPFILE
+
+
